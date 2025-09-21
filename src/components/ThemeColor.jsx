@@ -89,7 +89,7 @@ export default function ThemeColor() {
           className="p-3 bg-white rounded-full shadow-md hover:bg-neutral-200 transition flex items-center gap-2"
         >
           <TagIcon className="w-6 h-6 text-neutral-600" />
-          <span className="text-neutral-600 font-semibold">
+          <span className="text-neutral-600 font-semibold text-sm">
             #ToeyKaewNewChapter
           </span>
         </motion.button>

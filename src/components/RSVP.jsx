@@ -41,13 +41,13 @@ export default function RSVP() {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative h-96 lg:h-full w-full">
               {/* Image container with custom curved shape */}
-              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/I mmotel Love (241).jpg')" }}>
+              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/IMTL241.webp')" }}>
                 <div className="absolute inset-0 bg-white lg:bg-transparent custom-curved-overlay-lg"></div>
                 <div className="absolute inset-0 bg-white custom-curved-overlay-sm"></div>
               </div>
               {/* Fallback for smaller screens, if the curved overlay creates issues, use a simpler rounded one */}
               <img
-                src="./images/I mmotel Love (241).jpg" // แทนที่ด้วย path รูปภาพของคุณ
+                src="./images/IMTL241.webp" // แทนที่ด้วย path รูปภาพของคุณ
                 alt="Couple"
                 className="absolute inset-0 w-full h-full object-cover rounded-br-3xl rounded-tr-3xl" // Rounded for small screens
               />

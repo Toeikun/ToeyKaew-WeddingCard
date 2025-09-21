@@ -35,7 +35,7 @@ export default function WeddingInvitation() {
           {/* Left Side: Main Image */}
           <motion.div variants={itemVariants} className="w-full md:w-3/5 h-auto overflow-hidden rounded-lg shadow-lg">
             <img 
-              src="./images/I mmotel Love (171).jpg" 
+              src="./images/IMTL171.webp" 
               alt="Wedding Couple 2" 
               className="w-full h-full object-cover" 
             />
@@ -107,7 +107,7 @@ export default function WeddingInvitation() {
             className="w-full md:w-3/5 h-auto overflow-hidden rounded-lg shadow-lg"
           >
             <img 
-              src="./images/I mmotel Love (221).jpg" 
+              src="./images/IMTL221.webp" 
               alt="Wedding Couple 1" 
               className="w-full h-full object-cover" 
             />

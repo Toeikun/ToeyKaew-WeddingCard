@@ -68,7 +68,7 @@ export default function IntroSection() {
         {/* Right side - Image */}
         <div>
           <img
-            src="./images/I mmotel Love (207).jpg" // 👈 เปลี่ยน path รูปเองได้
+            src="./images/IMTL207.webp" // 👈 เปลี่ยน path รูปเองได้
             alt="Wedding Couple"
             className="rounded-lg shadow-lg"
           />

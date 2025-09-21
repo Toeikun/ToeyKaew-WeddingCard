@@ -6,13 +6,19 @@ export default function HeroHeader() {
     <section className="relative bg-[#f9f6f1] pt-10 pb-25">
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* รูปภาพ */}
-        <div className="md:w-1/2 px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="md:w-1/2 px-4"
+        >
           <img
-            src="./images/I mmotel Love (243).jpg"
+            src="./images/IMTL243.webp"
             alt="Couple"
             className="rounded-2xl shadow-lg"
           />
-        </div>
+        </motion.div>
 
         {/* ข้อความ */}
         <div className="md:w-1/2 text-center w-full max-w-lg">

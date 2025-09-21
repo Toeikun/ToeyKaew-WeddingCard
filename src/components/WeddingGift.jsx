@@ -25,7 +25,7 @@ export default function WeddingGift() {
         className="max-w-sm mx-auto bg-white rounded-2xl shadow p-6 text-center"
       >
         <img
-          src="./images/05E5736F-7410-450C-88CA-509C0E2C776C.jpg"
+          src="./images/QRPayment.jpg"
           alt="QR Code"
           className="rounded-xl shadow mb-4"
         />

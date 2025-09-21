@@ -37,7 +37,7 @@ export default function WeddingFooter() {
         >
           {/* Replace with your image */}
           <img
-            src="./images/SpecialGallery/I mmotel Love (218).jpg"
+            src="./images/IMTL218.webp"
             alt="Wedding Couple"
             className="w-full h-full object-cover"
           />
