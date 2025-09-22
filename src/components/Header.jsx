@@ -4,12 +4,24 @@ import { motion } from "framer-motion";
 export default function HeroHeader() {
   return (
     <section className="relative bg-[#f9f6f1] pt-10 pb-25">
+      <div className="container mx-auto text-center gap-12">
+        {/* อักษรย่อ KT */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-2xl romantic-text text-[#8b6b4f] leading-loose"
+          >
+            K&T
+          </motion.h1>
+      </div>
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* รูปภาพ */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          whileInView={{ opacity: 2, y: 0 }}
+          transition={{ duration: 3 }}
           viewport={{ once: true }}
           className="md:w-1/2 px-4"
         >
@@ -22,17 +34,6 @@ export default function HeroHeader() {
 
         {/* ข้อความ */}
         <div className="md:w-1/2 text-center w-full max-w-lg">
-          {/* อักษรย่อ KT */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-2xl romantic-text text-[#8b6b4f] leading-loose"
-          >
-            K&T
-          </motion.h1>
-
           {/* New Chapter Begins */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -68,7 +69,7 @@ export default function HeroHeader() {
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="text-3xl md:text-4xl font-serif text-[#7a7a7a] tracking-wide leading-loose">
+            <p className="text-3xl md:text-4xl font-semibold text-[#7a7a7a] tracking-wide leading-loose">
               NOVEMBER 15<sup>th</sup>, 2025
             </p>
           </motion.div>
@@ -114,16 +115,6 @@ export default function HeroHeader() {
           ></path>
         </svg>
       </div>
-
-      {/* Scroll text animation */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: [0, 1, 0], y: [-10, 0, -10] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-        className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-sm tracking-widest text-gray-500"
-      >
-        SCROLL
-      </motion.div>
     </section>
   );
 }

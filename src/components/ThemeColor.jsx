@@ -27,7 +27,7 @@ export default function ThemeColor() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-4xl font-semibold text-neutral-600 text-center mb-6"
+        className="text-4xl uppercase font-semibold text-neutral-600 text-center mb-6"
       >
         Theme Color
       </motion.h2>
@@ -59,26 +59,24 @@ export default function ThemeColor() {
 
       {/* Social icons */}
       <div className="flex justify-center gap-6 mt-12">
-        <motion.a
-          href="#"
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 1 * 0.2 }}
           viewport={{ once: true }}
-          className="p-3 bg-white rounded-full shadow-md hover:bg-neutral-200 transition"
+          className="p-3 rounded-full shadow-md transition bg-blue-600"
         >
-          <FacebookIcon className="w-6 h-6 text-neutral-600" />
-        </motion.a>
-        <motion.a
-          href="#"
+          <FacebookIcon className="w-6 h-6" />
+        </motion.div>
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 2 * 0.2 }}
           viewport={{ once: true }}
-          className="p-3 bg-white rounded-full shadow-md hover:bg-neutral-200 transition"
+          className="p-3 rounded-full shadow-md transition bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-300 ..."
         >
-          <InstagramIcon className="w-6 h-6 text-neutral-600" />
-        </motion.a>
+          <InstagramIcon className="w-6 h-6" />
+        </motion.div>
         {/* ปุ่มสำหรับ Copy ด้วย Clipboard API */}
         <motion.button
           onClick={handleCopy}
@@ -86,13 +84,18 @@ export default function ThemeColor() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 3 * 0.2 }}
           viewport={{ once: true }}
+          data-tooltip-target="tooltip-click"
+          data-tooltip-trigger="click"
           className="p-3 bg-white rounded-full shadow-md hover:bg-neutral-200 transition flex items-center gap-2"
         >
-          <TagIcon className="w-6 h-6 text-neutral-600" />
           <span className="text-neutral-600 font-semibold text-sm">
             #ToeyKaewNewChapter
           </span>
         </motion.button>
+        <div id="tooltip-click" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
+          Tooltip content
+          <div className="tooltip-arrow" data-popper-arrow></div>
+        </div>
       </div>
     </section>
   );

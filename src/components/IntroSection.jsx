@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function IntroSection() {
   const targetDate = new Date("2025-11-15T00:00:00"); // กำหนดวันที่งาน
@@ -29,21 +30,50 @@ export default function IntroSection() {
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  const renderCountdownBox = (value, label) => (
-    <div className="bg-[#d3c2b1] text-center rounded-2xl p-4 m-2 shadow-md flex-1">
-      <div className="text-white text-3xl">
-        {String(value).padStart(2, '0')}
-      </div>
-      <div className="text-white text-sm mt-1">
-        {label}
-      </div>
-    </div>
-  );
+  const timeSegments = [
+    { value: timeLeft.days, label: "DAYS" },
+    { value: timeLeft.hours, label: "HOURS" },
+    { value: timeLeft.minutes, label: "MINUTES" },
+    { value: timeLeft.seconds, label: "SECONDS" },
+  ];
+
+  // Variants สำหรับ animation แบบ fade-in และ scale-up
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+      },
+    },
+  };
+
   return (
     <section className="bg-white py-16 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+      <motion.div
+        className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10"
+        variants={containerVariants}
+      >
         {/* Left side - Text & Countdown */}
-        <div className="text-center md:text-center">
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible" // 👈 เปลี่ยนจาก animate เป็น whileInView
+          viewport={{ once: true }} // 👈 เพิ่ม viewport เพื่อให้ animation ทำงานแค่ครั้งเดียว
+          className="w-full md:w-1/2 text-center"
+        >
           <h2 className="text-4xl font-semibold tracking-widest text-neutral-600 mb-6">
             SATURDAY
           </h2>
@@ -55,26 +85,42 @@ export default function IntroSection() {
           <p className="text-gray-500 text-sm mb-8">
             Please join us in celebrating our love and marriage, countdown in...
           </p>
-
-          {/* Countdown */}
-          <div className="flex justify-center items-center">
-            {renderCountdownBox(timeLeft.days, 'Days')}
-            {renderCountdownBox(timeLeft.hours, 'Hours')}
-            {renderCountdownBox(timeLeft.minutes, 'Minutes')}
-            {renderCountdownBox(timeLeft.seconds, 'Seconds')}
+          <div className="flex justify-center items-center font-sans tracking-wide text-center">
+            {timeSegments.map((segment, index) => (
+              <React.Fragment key={index}>
+                <div className="flex flex-col items-center mx-2 md:mx-4">
+                  <span className="text-4xl md:text-6xl text-[#b49a94]">
+                    {String(segment.value).padStart(2, "0")}
+                  </span>
+                  <span className="text-sm md:text-base text-[#b49a94]">
+                    {segment.label}
+                  </span>
+                </div>
+                {index < timeSegments.length - 1 && (
+                  <span className="text-4xl md:text-6xl text-[#b49a94] font-light">
+                    :
+                  </span>
+                )}
+              </React.Fragment>
+            ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Right side - Image */}
-        <div>
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible" // 👈 เปลี่ยนจาก animate เป็น whileInView
+          viewport={{ once: true }} // 👈 เพิ่ม viewport เพื่อให้ animation ทำงานแค่ครั้งเดียว
+          className="w-full md:w-1/2"
+        >
           <img
-            src="./images/IMTL207.webp" // 👈 เปลี่ยน path รูปเองได้
+            src="./images/IMTL207.webp"
             alt="Wedding Couple"
             className="rounded-lg shadow-lg"
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
-  
 }

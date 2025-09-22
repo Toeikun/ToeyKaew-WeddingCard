@@ -6,7 +6,7 @@ export default function ReceptionSchedule() {
   return (
     <section
       id="reception"
-      className="section relative py-20 px-4 bg-neutral-50 overflow-hidden"
+      className="section relative py-20 px-4 bg-neutral-200 overflow-hidden"
     >
       {/* พื้นหลังตัดเฉียงด้านบน */}
       <div
@@ -39,7 +39,7 @@ export default function ReceptionSchedule() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <p className="text-3xl md:text-1xl font-serif text-[#7a7a7a] tracking-wide leading-loose">
+          <p className="text-3xl md:text-1xl font-semibold text-[#7a7a7a] tracking-wide leading-loose">
             NOVEMBER 15<sup>th</sup>, 2025
           </p>
           <p className="text-lg font-medium text-[#7a7a7a] leading-loose">
@@ -78,17 +78,37 @@ export default function ReceptionSchedule() {
               <Utensils className="w-10 h-10 text-gray-600" />
             </div>
             <p className="text-lg text-gray-700">16:00 น.</p>
-            <p className="font-medium text-[#B8985F]">รับประทานอาหาร</p>
+            <p className="font-medium text-[#B8985F]">
+              รับประทานอาหาร (โต๊ะจีน)
+            </p>
             <p className="text-sm text-gray-500">DINNER CELEBRATION</p>
           </motion.div>
         </div>
         {/* Location Section */}
         <div className="mt-20">
-          <div className="flex justify-center mb-6">
-            <MapPinned className="w-10 h-10 text-neutral-600"/>
-          </div>
-
-          <p className="text-3xl md:text-1xl font-serif text-[#7A6C63] mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex justify-center mb-6"
+          >
+            <MapPinned className="w-10 h-10 text-neutral-600" />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex justify-center"
+          >
+            <img
+              src="./images/Location.jpg"
+              alt="Location"
+              className="w-3/5 rounded-xl shadow mb-4"
+            />
+          </motion.div>
+          <p className="text-2xl md:text-1xl font-serif text-[#7A6C63] mb-6">
             วัดนักบุญเปโตร สามพราน
           </p>
 

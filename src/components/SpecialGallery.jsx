@@ -36,33 +36,39 @@ export const SpecialGallery = ({ allImages }) => {
     }, 1500);
   };
 
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+  };
+
   return (
     <div className="section py-16 px-4 bg-[#F5F2F0]">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-semibold text-[#6D5D51] mb-12">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-4xl font-semibold text-[#6D5D51] mb-12"
+        >
           SPECIAL GALLERY
-        </h2>
+        </motion.h2>
 
         <InfiniteScroll
           dataLength={items.length}
           next={fetchMoreData}
           hasMore={hasMore}
           loader={<h4 className="text-gray-500 my-8">Loading more photos...</h4>}
-          endMessage={
-            <p className="text-gray-500 my-8">
-              <b>You have seen all the photos!</b>
-            </p>
-          }
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {items.map((imgSrc, index) => (
               <motion.div
                 key={index}
                 className="w-full h-auto"
-                initial={{ opacity: 0, y: 50 }} // กำหนดสถานะเริ่มต้น: ซ่อนอยู่และอยู่ต่ำกว่า
-                whileInView={{ opacity: 1, y: 0 }} // กำหนดสถานะเป้าหมาย: ปรากฏขึ้นและเลื่อนขึ้นมา
-                transition={{ duration: 0.6, delay: index * 0.1 }} // กำหนดระยะเวลาและความหน่วง
-                viewport={{ once: true, amount: 0.8 }} // กำหนดให้ animation ทำงานแค่ครั้งเดียวเมื่ออยู่ในหน้าจอ
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true, amount: 0.8 }}
               >
                 <img
                   src={imgSrc}
@@ -73,6 +79,32 @@ export const SpecialGallery = ({ allImages }) => {
             ))}
           </div>
         </InfiniteScroll>
+
+        {/* Section of final message */}
+        <div className="mt-16 max-w-2xl mx-auto">
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+            viewport={{ once: true }}
+            className="text-4xl font-semibold text-[#6D5D51] mb-4"
+          >
+            We can't wait to hear from you.
+          </motion.h2>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            variants={textVariants}
+            viewport={{ once: true }}
+            className="text-gray-600 leading-relaxed"
+          >
+            We truly hope you can join us on our special day.  
+            <br />
+            Please come as you are—no need for anything too formal.
+            <br />
+            Let's celebrate, laugh, and make great memories together. See you there!
+          </motion.p>
+        </div>
       </div>
     </div>
   );
