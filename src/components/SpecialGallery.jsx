@@ -100,7 +100,7 @@ export const SpecialGallery = ({ allImages }) => {
           >
             We truly hope you can join us on our special day.  
             <br />
-            Please come as you are—no need for anything too formal.
+            Please come as you are no need for anything too formal.
             <br />
             Let's celebrate, laugh, and make great memories together. See you there!
           </motion.p>

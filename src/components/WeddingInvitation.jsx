@@ -58,15 +58,15 @@ export default function WeddingInvitation() {
         >
           <div className="text-center text-sm">
             <p className="text-[#8b6b4f] mb-1 font-serif">BRIDE'S PARENTS</p>
-            <div className="text-gray-500 text-sm tracking-wide leading-loose">
+            <div className="text-gray-500 text-sm tracking-wide">
               <p>คุณปรีชา จินตเสรีวงศ์</p>
               <p>คุณพัชรา จินตเสรีวงศ์</p>
             </div>
           </div>
-          <div className="text-2xl text-gray-500 font-serif px-3">&</div>
+          <div className="text-2xl text-gray-500 font-serif px-1">&</div>
           <div className="text-center text-sm">
             <p className="text-[#8b6b4f] mb-1 font-serif">GROOM'S PARENTS</p>
-            <div className="text-gray-500 tracking-wide leading-loose">
+            <div className="text-gray-500 tracking-wide">
               <p>คุณมณฑล มนวรัชกรนุกูล</p>
               <p>คุณขนิษฐา คุ้มเสนียด</p>
             </div>
