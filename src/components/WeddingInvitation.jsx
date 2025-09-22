@@ -56,15 +56,15 @@ export default function WeddingInvitation() {
           viewport={{ once: true }}
           className="flex justify-center"
         >
-          <div className="text-center">
+          <div className="text-center text-sm">
             <p className="text-[#8b6b4f] mb-1 font-serif">BRIDE'S PARENTS</p>
-            <div className="text-gray-500 tracking-wide leading-loose">
+            <div className="text-gray-500 text-sm tracking-wide leading-loose">
               <p>คุณปรีชา จินตเสรีวงศ์</p>
               <p>คุณพัชรา จินตเสรีวงศ์</p>
             </div>
           </div>
-          <div className="text-3xl text-gray-500 font-serif px-3">&</div>
-          <div className="text-center">
+          <div className="text-2xl text-gray-500 font-serif px-3">&</div>
+          <div className="text-center text-sm">
             <p className="text-[#8b6b4f] mb-1 font-serif">GROOM'S PARENTS</p>
             <div className="text-gray-500 tracking-wide leading-loose">
               <p>คุณมณฑล มนวรัชกรนุกูล</p>
@@ -103,11 +103,11 @@ export default function WeddingInvitation() {
                 <p className="font-serif text-md text-gray-500">
                   นางสาวศุภมาส จินตเสรีวงศ์ (แก้ว)
                 </p>
-                <p className="lg:text-4xl text-3xl font-semibold text-[#7a7a7a] mt-2">
+                <p className="lg:text-4xl text-2xl font-semibold text-[#7a7a7a] mt-2">
                   Supamas Jintasereewong
                 </p>
                 <p className="my-2 text-gray-500 font-semibold text-sm">and</p>
-                <p className="lg:text-4xl text-3xl font-semibold text-[#7a7a7a]">
+                <p className="lg:text-4xl text-2xl font-semibold text-[#7a7a7a]">
                   Chayut Pruekthanes
                 </p>
                 <p className="font-serif text-md text-gray-500">

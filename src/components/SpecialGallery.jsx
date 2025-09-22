@@ -60,7 +60,7 @@ export const SpecialGallery = ({ allImages }) => {
           hasMore={hasMore}
           loader={<h4 className="text-gray-500 my-8">Loading more photos...</h4>}
         >
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-4">
             {items.map((imgSrc, index) => (
               <motion.div
                 key={index}
@@ -96,7 +96,7 @@ export const SpecialGallery = ({ allImages }) => {
             whileInView="visible"
             variants={textVariants}
             viewport={{ once: true }}
-            className="text-gray-600 leading-relaxed"
+            className="text-gray-600 leading-relaxed text-sm"
           >
             We truly hope you can join us on our special day.  
             <br />
