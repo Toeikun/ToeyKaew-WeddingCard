@@ -63,7 +63,7 @@ export default function WeddingInvitation() {
               <p>คุณพัชรา จินตเสรีวงศ์</p>
             </div>
           </div>
-          <div className="text-2xl text-gray-500 font-serif px-1">&</div>
+          <div className="text-2xl text-gray-500 font-serif px-1.5">&</div>
           <div className="text-center text-sm">
             <p className="text-[#8b6b4f] mb-1 font-serif">GROOM'S PARENTS</p>
             <div className="text-gray-500 tracking-wide">
@@ -81,9 +81,8 @@ export default function WeddingInvitation() {
           transition={{ duration: 1, delay: 0.3 }}
           viewport={{ once: true }}
           variants={itemVariants} className="text-center my-12 tracking-wide text-md leading-loose">
-          <p className="text-[#8b6b4f] font-bold">WE ARE PLEASED TO INVITE YOU TO THE WEDDING</p>
-          <p className='text-gray-500'>มีความยินดีขอเรียนเชิญท่านเพื่อเป็นเกียรติ</p>
-          <p className='text-gray-500'>เนื่องในพิธีมงคลสมรส</p>
+          <p className='text-gray-500 font-bold'>มีความยินดีขอเรียนเชิญท่านเพื่อเป็นเกียรติ</p>
+          <p className='text-gray-500 font-bold'>และร่วมรับประทานอาหาร เนื่องในพิธีมงคลสมรส</p>
         </motion.div>
       </div>
       <div className="bg-white py-4 px-4">
@@ -126,7 +125,7 @@ export default function WeddingInvitation() {
               className="w-full md:w-3/5 h-auto overflow-hidden rounded-lg shadow-lg -mt-10 md:mt-0"
             >
               <img
-                src="./images/IMTL221.webp"
+                src="./images/IMTL113.webp"
                 alt="Wedding Couple 1"
                 className="w-full h-full object-cover"
               />

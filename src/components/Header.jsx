@@ -11,9 +11,9 @@ export default function HeroHeader() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="text-2xl romantic-text text-[#8b6b4f] leading-loose"
+            className="text-2xl romantic-text text-[#8b6b4f]"
           >
-            K&T
+            KT
           </motion.h1>
       </div>
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
@@ -83,7 +83,7 @@ export default function HeroHeader() {
             className="text-sm text-gray-500 leading-loose px-4"
           >
             You are invited to our wedding ceremony and to the celebration of
-            our marriage. We hope to see you on our special day.
+            our marriage. We hope to see you on our special day!
           </motion.p>
         </div>
       </div>

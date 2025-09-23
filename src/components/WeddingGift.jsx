@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Gift } from "lucide-react";
 
 export default function WeddingGift() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,18 +11,37 @@ export default function WeddingGift() {
 
   return (
     <section id="gift" className="py-20 px-4 bg-white">
+      {/* Gift */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center"
+      >
+        <div className="w-20 h-20 flex items-center justify-center rounded-full bg- shadow-md mb-6">
+          <Gift className="w-10 h-10 text-pink-300" />
+        </div>
+      </motion.div>
       {/* Gift Section Content */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-4xl uppercase font-semibold text-neutral-600 text-center mb-4"
+        className="text-4xl uppercase font-semibold text-pink-300 text-center mb-4"
       >
         Wedding Gift
       </motion.h2>
+      <div className="flex items-center justify-center gap-4 text-gray-600 mb-6">
+        <span className="w-20 md:w-28 border-t border-gray-400" />
+        <p className="text-sm font-light">ส่งของขวัญให้คู่บ่าวสาว</p>
+        <span className="w-20 md:w-28 border-t border-gray-400" />
+      </div>
       <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-        หากต้องการมอบของขวัญสามารถทำได้โดยการกดปุ่มด้านล่าง
+        ร่วมแสดงความยินดีและส่งมอบของขวัญให้คู่บ่าวสาว
+        <br/>
+        เนื่องในโอกาสพิเศษ ผ่านช่องทาง QR นี้
       </p>
 
       {/* Button to open the modal */}
@@ -30,15 +50,21 @@ export default function WeddingGift() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-center"
+        className="text-center mb-10"
       >
         <button
           onClick={openModal}
-          className="bg-[#d3c2b1] text-white px-8 py-3 rounded-full shadow-lg hover:bg-[#b4a395] transition-colors"
+          className="bg-pink-300 text-white px-8 py-3 rounded-full shadow-lg hover:bg-[#FAD4A8] transition-colors"
         >
-          แสดง QR Code สำหรับของขวัญ
+          QR CODE ส่งของขวัญ
         </button>
       </motion.div>
+
+      <p className="text-sx text-gray-600 text-center mb-4">
+        ขอขอบคุณทุกท่านที่ร่วมเป็นส่วนหนึ่งในวันสำคัญของเรา
+        <br/>
+        หากส่งของขวัญให้เราแล้ว แจ้งให้เราทราบทาง Line นะคะ
+      </p>
 
       {/* Full-screen Modal for QR Code */}
       <AnimatePresence>
@@ -69,18 +95,13 @@ export default function WeddingGift() {
                 alt="QR Code"
                 className="rounded-xl shadow w-full mb-4"
               />
-              <p className="text-gray-600 text-center mb-4">
-                ขอความกรุณาแจ้งให้เราทราบหลังจากการโอนเงินเสร็จสิ้น
-                เพื่อความสะดวกในการตรวจสอบข้อมูล
-                และขอขอบพระคุณสำหรับน้ำใจและทุกคำอวยพรที่มอบให้ครับ/ค่ะ
-              </p>
-              <a
+              {/* <a
                 href="./images/QRPayment.jpg"
                 download
                 className="block w-full text-center bg-[#d3c2b1] text-white py-3 rounded-full hover:bg-[#b4a395] transition-colors"
               >
                 ดาวน์โหลด QR Code
-              </a>
+              </a> */}
             </motion.div>
           </motion.div>
         )}

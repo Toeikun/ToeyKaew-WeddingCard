@@ -6,7 +6,7 @@ export default function ReceptionSchedule() {
   return (
     <section
       id="reception"
-      className="section relative py-20 px-4 bg-neutral-200 overflow-hidden"
+      className="section relative py-10 px-4 bg-neutral-200 overflow-hidden"
     >
       {/* พื้นหลังตัดเฉียงด้านบน */}
       <div
@@ -57,7 +57,7 @@ export default function ReceptionSchedule() {
             className="flex flex-col items-center"
           >
             <div className="w-20 h-20 flex items-center justify-center rounded-full bg-gray-100 shadow-md mb-4">
-              <Church className="w-10 h-10 text-gray-600" />
+              <Church className="w-10 h-10 text-[#B8985F]" />
             </div>
             <p className="text-lg text-gray-700">14:00 น.</p>
             <p className="font-medium text-[#B8985F]">พิธีมงคลสมรส</p>
@@ -75,7 +75,7 @@ export default function ReceptionSchedule() {
             className="flex flex-col items-center"
           >
             <div className="w-20 h-20 flex items-center justify-center rounded-full bg-gray-100 shadow-md mb-4">
-              <Utensils className="w-10 h-10 text-gray-600" />
+              <Utensils className="w-10 h-10 text-[#B8985F]" />
             </div>
             <p className="text-lg text-gray-700">16:00 น.</p>
             <p className="font-medium text-[#B8985F]">
@@ -103,7 +103,7 @@ export default function ReceptionSchedule() {
             className="flex justify-center"
           >
             <img
-              src="./images/Location.jpg"
+              src="./images/Location2.png"
               alt="Location"
               className="w-3/5 rounded-xl shadow mb-4"
             />
@@ -119,7 +119,7 @@ export default function ReceptionSchedule() {
             rel="noopener noreferrer"
             className="inline-block px-8 py-4 rounded-lg bg-[#B9A693] text-white font-semibold text-sm md:text-base tracking-wider hover:bg-[#B9A693] transition duration-300 shadow-md"
           >
-            VENUE : สถานที่จัดงาน (คลิก)
+            VENUE : สถานที่จัดงาน
           </a>
         </div>
       </div>

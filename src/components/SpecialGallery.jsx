@@ -1,5 +1,3 @@
-// ไฟล์ SpecialGallery.jsx
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -73,7 +71,7 @@ export const SpecialGallery = ({ allImages }) => {
                 <img
                   src={imgSrc}
                   alt={`Gallery photo ${index + 1}`}
-                  className="w-full h-full object-cover rounded-lg shadow-sm aspect-square"
+                  className="w-full h-full object-cover rounded-lg shadow-sm"
                 />
               </motion.div>
             ))}
@@ -81,15 +79,15 @@ export const SpecialGallery = ({ allImages }) => {
         </InfiniteScroll>
 
         {/* Section of final message */}
-        <div className="mt-16 max-w-2xl mx-auto">
+        <div className="mt-12 max-w-2xl mx-auto">
           <motion.h2
             initial="hidden"
             whileInView="visible"
             variants={textVariants}
             viewport={{ once: true }}
-            className="text-4xl font-semibold text-[#6D5D51] mb-4"
+            className="text-2xl font-semibold text-[#6D5D51] mb-4"
           >
-            We can't wait to hear from you.
+            We can't wait to hear from you
           </motion.h2>
           <motion.p
             initial="hidden"
@@ -102,7 +100,7 @@ export const SpecialGallery = ({ allImages }) => {
             <br />
             Please come as you are no need for anything too formal.
             <br />
-            Let's celebrate, laugh, and make great memories together. See you there!
+            Let's celebrate, laugh and make great memories together. See you there!
           </motion.p>
         </div>
       </div>

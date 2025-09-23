@@ -77,26 +77,17 @@ export default function ThemeColor() {
         >
           <InstagramIcon className="w-6 h-6" />
         </motion.div>
-        {/* ปุ่มสำหรับ Copy ด้วย Clipboard API */}
-        <motion.button
-          onClick={handleCopy}
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 3 * 0.2 }}
-          viewport={{ once: true }}
-          data-tooltip-target="tooltip-click"
-          data-tooltip-trigger="click"
-          className="p-3 bg-white rounded-full shadow-md hover:bg-neutral-200 transition flex items-center gap-2"
-        >
-          <span className="text-neutral-600 font-semibold text-sm">
-            #ToeyKaewNewChapter
-          </span>
-        </motion.button>
-        <div id="tooltip-click" role="tooltip" className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700">
-          Tooltip content
-          <div className="tooltip-arrow" data-popper-arrow></div>
-        </div>
       </div>
+      <motion.div 
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="flex items-center justify-center gap-4 text-gray-600 m-6">
+        <span className="w-20 md:w-28 border-t border-gray-400" />
+        <p className="text-lg font-medium">#ToeyKaewNewChapter</p>
+        <span className="w-20 md:w-28 border-t border-gray-400" />
+      </motion.div>
     </section>
   );
 }
