@@ -16,7 +16,7 @@ export default function HeroHeader() {
             KT
           </motion.h1>
       </div>
-      <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* รูปภาพ */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
