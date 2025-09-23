@@ -34,9 +34,9 @@ export default function WeddingGift() {
         Wedding Gift
       </motion.h2>
       <div className="flex items-center justify-center gap-4 text-gray-600 mb-6">
-        <span className="w-20 md:w-28 border-t border-gray-400" />
+        <span className="w-20 md:w-26 border-t border-gray-400" />
         <p className="text-sm font-light">ส่งของขวัญให้คู่บ่าวสาว</p>
-        <span className="w-20 md:w-28 border-t border-gray-400" />
+        <span className="w-20 md:w-26 border-t border-gray-400" />
       </div>
       <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
         ร่วมแสดงความยินดีและส่งมอบของขวัญให้คู่บ่าวสาว
@@ -61,9 +61,7 @@ export default function WeddingGift() {
       </motion.div>
 
       <p className="text-sx text-gray-600 text-center mb-4">
-        ขอขอบคุณทุกท่านที่ร่วมเป็นส่วนหนึ่งในวันสำคัญของเรา
-        <br/>
-        หากส่งของขวัญให้เราแล้ว แจ้งให้เราทราบทาง Line นะคะ
+        ขอขอบคุณทุกท่านที่ร่วมเป็นส่วนหนึ่งในวันสำคัญของเรา หากส่งของขวัญให้เราแล้ว แจ้งให้เราทราบทาง Line นะคะ
       </p>
 
       {/* Full-screen Modal for QR Code */}
