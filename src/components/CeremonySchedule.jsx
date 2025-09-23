@@ -105,7 +105,7 @@ export default function ReceptionSchedule() {
             <img
               src="./images/Location2.png"
               alt="Location"
-              className="w-3/5 rounded-xl shadow mb-4"
+              className="w-4/5 rounded-xl shadow mb-4"
             />
           </motion.div>
           <p className="text-2xl md:text-1xl font-serif text-[#7A6C63] mb-6">

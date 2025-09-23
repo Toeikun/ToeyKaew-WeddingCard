@@ -34,14 +34,12 @@ export default function WeddingGift() {
         Wedding Gift
       </motion.h2>
       <div className="flex items-center justify-center gap-4 text-gray-600 mb-6">
-        <span className="w-20 md:w-26 border-t border-gray-400" />
+        <span className="w-18 md:w-26 border-t border-gray-400" />
         <p className="text-sm font-light">ส่งของขวัญให้คู่บ่าวสาว</p>
-        <span className="w-20 md:w-26 border-t border-gray-400" />
+        <span className="w-18 md:w-26 border-t border-gray-400" />
       </div>
       <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-        ร่วมแสดงความยินดีและส่งมอบของขวัญให้คู่บ่าวสาว
-        <br/>
-        เนื่องในโอกาสพิเศษ ผ่านช่องทาง QR นี้
+        ร่วมแสดงความยินดีและส่งมอบของขวัญให้คู่บ่าวสาว เนื่องในโอกาสพิเศษ ผ่านช่องทาง QR นี้
       </p>
 
       {/* Button to open the modal */}
