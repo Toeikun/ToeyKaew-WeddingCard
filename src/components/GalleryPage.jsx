@@ -11,7 +11,7 @@ const galleryImages = [
   './images/IMTL266.webp',
   './images/IMTL270.webp',
   './images/IMTL295.webp',
-  './images/IMTL302.webp'
+  './images/IMTL225.webp'
 ];
 
 const GalleryPage = () => {
