@@ -4,17 +4,20 @@ import { motion } from "framer-motion";
 export default function HeroHeader() {
   return (
     <section className="relative bg-[#f9f6f1] pt-10 pb-25">
-      <div className="container mx-auto text-center gap-12">
+      <div className="container mx-auto flex flex-row justify-center mb-5">
         {/* อักษรย่อ KT */}
-          <motion.h1
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            whileInView={{ opacity: 2, y: 0 }}
+            transition={{ duration: 3 }}
             viewport={{ once: true }}
-            className="text-2xl romantic-text text-[#8b6b4f]"
+            className="w-40 lg:w-55 px-4"
           >
-            KT
-          </motion.h1>
+            <img
+              src="./images/KT.png"
+              alt="KT"
+            />
+          </motion.div>
       </div>
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-10">
         {/* รูปภาพ */}

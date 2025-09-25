@@ -20,7 +20,7 @@ export default function WeddingGift() {
         className="flex flex-col items-center"
       >
         <div className="w-20 h-20 flex items-center justify-center rounded-full bg- shadow-md mb-6">
-          <Gift className="w-10 h-10 text-pink-300" />
+          <Gift className="w-10 h-10 text-[#f7c1ae]" />
         </div>
       </motion.div>
       {/* Gift Section Content */}
@@ -29,7 +29,7 @@ export default function WeddingGift() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-4xl uppercase font-semibold text-pink-300 text-center mb-4"
+        className="text-4xl uppercase font-semibold text-[#f7c1ae] text-center mb-4"
       >
         Wedding Gift
       </motion.h2>
@@ -52,7 +52,7 @@ export default function WeddingGift() {
       >
         <button
           onClick={openModal}
-          className="bg-pink-300 text-white px-8 py-3 rounded-full shadow-lg hover:bg-[#FAD4A8] transition-colors"
+          className="bg-[#f7c1ae] text-white px-8 py-3 rounded-full shadow-lg hover:bg-[#FAD4A8] transition-colors"
         >
           QR CODE ส่งของขวัญ
         </button>
